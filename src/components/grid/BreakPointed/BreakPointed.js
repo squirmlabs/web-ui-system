@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@symbols/core/withStyles';
-import Grid from '@symbols/structure/Grid';
+import Grid from '@symbols/grid/Grid';
 import Paper from '@symbols/v1/Paper';
 import { styles } from './styles';
 import { propTypes } from './propTypes';

@@ -1,6 +1,6 @@
 import React from 'react';
 import withStyles from '@symbols/core/withStyles';
-import Grid from '@symbols/structure/Grid';
+import Grid from '@symbols/grid/Grid';
 import FormControl from '@symbols/v1/Form/FormControl';
 import FormLabel from '@symbols/v1/Form/FormLabel';
 import FormControlLabel from '@symbols/v1/Form/FormControlLabel';
