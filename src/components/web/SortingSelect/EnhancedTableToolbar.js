@@ -1,12 +1,12 @@
 import React from 'react';
 import classnames from 'classnames';
 import { enhancedTableToolbarProptypes } from './propTypes';
-import Toolbar from '@symbols/elements/Toolbar';
-import IconButton from '@symbols/elements/IconButton';
-import Tooltip from '@symbols/elements/Tooltip';
-import DeleteIcon from '@symbols/elements/UIIcons/Delete';
-import FilterListIcon from '@symbols/elements/UIIcons/FilterList';
-import Typography from '@symbols/elements/Typography';
+import Toolbar from '@symbols/v1/Toolbar';
+import IconButton from '@symbols/v1/IconButton';
+import Tooltip from '@symbols/v1/Tooltip';
+import DeleteIcon from '@symbols/v1/UIIcons/Delete';
+import FilterListIcon from '@symbols/v1/UIIcons/FilterList';
+import Typography from '@symbols/v1/Typography';
 import withStyles from '@symbols/core/withStyles';
 import { toolbarStyles } from './styles';
 

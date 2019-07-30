@@ -1,11 +1,11 @@
 import React from 'react';
 import { enhancedTableHeadProptypes } from './propTypes';
-import TableHead from '@symbols/elements/TableHead';
-import TableRow from '@symbols/elements/TableRow';
-import Tooltip from '@symbols/elements/Tooltip';
-import TableCell from '@symbols/elements/TableCell';
-import Checkbox from '@symbols/elements/Checkbox';
-import TableSortLabel from '@symbols/elements/TableSortLabel';
+import TableHead from '@symbols/v1/TableHead';
+import TableRow from '@symbols/v1/TableRow';
+import Tooltip from '@symbols/v1/Tooltip';
+import TableCell from '@symbols/v1/TableCell';
+import Checkbox from '@symbols/v1/Checkbox';
+import TableSortLabel from '@symbols/v1/TableSortLabel';
 import { rows } from './createData';
 export class EnhancedTableHead extends React.Component {
   createSortHandler = property => event => {

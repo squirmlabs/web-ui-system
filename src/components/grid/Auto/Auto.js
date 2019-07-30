@@ -1,6 +1,6 @@
 import React from 'react';
 import withStyles from '@symbols/core/withStyles';
-import Paper from '@symbols/elements/Paper';
+import Paper from '@symbols/v1/Paper';
 import Grid from '@symbols/structure/Grid';
 import { styles } from './styles';
 import { propTypes } from './propTypes';

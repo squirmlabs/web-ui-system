@@ -1,12 +1,12 @@
 import React from 'react';
 import withStyles from '@symbols/core/withStyles';
 import Grid from '@symbols/structure/Grid';
-import FormControl from '@symbols/elements/Form/FormControl';
-import FormLabel from '@symbols/elements/Form/FormLabel';
-import FormControlLabel from '@symbols/elements/Form/FormControlLabel';
-import RadioGroup from '@symbols/elements/RadioGroup';
-import Radio from '@symbols/elements/Radio';
-import Paper from '@symbols/elements/Paper';
+import FormControl from '@symbols/v1/Form/FormControl';
+import FormLabel from '@symbols/v1/Form/FormLabel';
+import FormControlLabel from '@symbols/v1/Form/FormControlLabel';
+import RadioGroup from '@symbols/v1/RadioGroup';
+import Radio from '@symbols/v1/Radio';
+import Paper from '@symbols/v1/Paper';
 import { styles } from './styles';
 import { propTypes } from './propTypes';
 

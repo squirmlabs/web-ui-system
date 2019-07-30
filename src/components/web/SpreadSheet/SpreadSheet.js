@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Spreadsheet from '@symbols/elements/SpreadSheet';
+import Spreadsheet from '@symbols/v1/SpreadSheet';
 
 export default () => {
   const exampleOne = {};

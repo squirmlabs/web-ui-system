@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import UITypography from '@symbols/elements/Typography';
+import UITypography from '@symbols/v1/Typography';
 import withStyles from '@symbols/core/withStyles';
 import { styles } from './styles';
 

@@ -1,7 +1,9 @@
-.yarn-cache/
-./node_modules
-.DS_Store
-node_modules
-
-./styleguide
 ./dist
+./node_modules
+./styleguide
+
+dist
+node_modules
+styleguide
+.yarn-cache/
+.DS_Store

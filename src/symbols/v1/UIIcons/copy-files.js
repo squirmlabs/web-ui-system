@@ -27,7 +27,7 @@ function createPackageFile() {
     .then(packageData => {
       const minimalPackage = {
         ...packageData,
-        name: '../../symbols/elements/UIIcons',
+        name: '../../symbols/v1/UIIcons',
         main: './index.js',
         module: './index.es.js',
         'jsnext:main': './index.es.js',

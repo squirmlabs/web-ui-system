@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '../../../symbols/core/withStyles';
-import BottomNavigation, { BottomNavigationAction } from '../../../symbols/elements/BottomNavigation';
-import Icon from '../../../symbols/elements/Icon';
-import RestoreIcon from '../../../symbols/elements/UIIcons/Report';
-import FavoriteIcon from '../../../symbols/elements/UIIcons/Favorite';
-import LocationOnIcon from '../../../symbols/elements/UIIcons/Mail';
+import BottomNavigation, { BottomNavigationAction } from '../../../symbols/v1/BottomNavigation';
+import Icon from '../../../symbols/v1/Icon';
+import RestoreIcon from '../../../symbols/v1/UIIcons/Report';
+import FavoriteIcon from '../../../symbols/v1/UIIcons/Favorite';
+import LocationOnIcon from '../../../symbols/v1/UIIcons/Mail';
 
 const styles = {
   root: {

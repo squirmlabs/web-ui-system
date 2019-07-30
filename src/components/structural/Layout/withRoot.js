@@ -5,7 +5,7 @@ import type { ComponentType } from 'react';
 import { UIThemeProvider, createUITheme } from '../../../../lib/system';
 import indigo from '@symbols/core/colors/indigo';
 import green from '@symbols/core/colors/green';
-import Reboot from '../../../symbols/elements/Reboot';
+import Reboot from '../../../symbols/v1/Reboot';
 
 // A theme with custom primary and secondary color.
 // It's optional.

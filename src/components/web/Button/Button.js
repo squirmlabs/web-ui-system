@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import withStyles from '@symbols/core/withStyles';
-import ButtonBase from '@symbols/elements/ButtonBase';
+import ButtonBase from '@symbols/v1/ButtonBase';
 
 import { isUIElement } from '@symbols/core/reactHelpers';
 import { styles } from './styles';

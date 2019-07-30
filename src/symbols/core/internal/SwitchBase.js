@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import CheckBoxOutlineBlankIcon from '../internal/svg-icons/CheckBoxOutlineBlank';
 import CheckBoxIcon from '../internal/svg-icons/CheckBox';
 import withStyles from '../withStyles';
-import IconButton from '../../elements/IconButton';
+import IconButton from '../../v1/IconButton';
 
 export const styles = {
   root: {

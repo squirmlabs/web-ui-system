@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from '@symbols/core/withStyles';
 
 import Button from './Button';
-import AddCircle from '@symbols/elements/UIIcons/AddCircle';
+import AddCircle from '@symbols/v1/UIIcons/AddCircle';
 import { styles } from './ButtonNewElement/styles';
 
 function IconButtonPrimary({

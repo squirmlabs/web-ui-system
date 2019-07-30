@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, func } from 'prop-types';
-import KeyboardArrowDown from '@symbols/elements/UIIcons/KeyboardArrowDown';
+import KeyboardArrowDown from '@symbols/v1/UIIcons/KeyboardArrowDown';
 import Button from './Button';
 
 export const MoveToStoryButton = ({ onClick, showBody }) => {

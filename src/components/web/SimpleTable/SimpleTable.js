@@ -1,12 +1,12 @@
 
 import React from 'react';
 import withStyles from '@symbols/core/withStyles';
-import Table from '@symbols/elements/Table';
-import TableBody from '@symbols/elements/TableBody';
-import TableCell from '@symbols/elements/TableCell';
-import TableHead from '@symbols/elements/TableHead';
-import TableRow from '@symbols/elements/TableRow';
-import Paper from '@symbols/elements/Paper';
+import Table from '@symbols/v1/Table';
+import TableBody from '@symbols/v1/TableBody';
+import TableCell from '@symbols/v1/TableCell';
+import TableHead from '@symbols/v1/TableHead';
+import TableRow from '@symbols/v1/TableRow';
+import Paper from '@symbols/v1/Paper';
 import { styles } from './styles';
 import { rows } from './createData';
 import { propTypes } from './propTypes';

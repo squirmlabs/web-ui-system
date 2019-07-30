@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import withStyles from '@symbols/core/withStyles';
 
 import Button from './Button';
-import KeyboardArrowUp from '@symbols/elements/UIIcons/KeyboardArrowUp';
-import KeyboardArrowDown from '@symbols/elements/UIIcons/KeyboardArrowDown';
+import KeyboardArrowUp from '@symbols/v1/UIIcons/KeyboardArrowUp';
+import KeyboardArrowDown from '@symbols/v1/UIIcons/KeyboardArrowDown';
 import { styles } from './IconButton/styles';
 
 class IconButton extends React.Component {

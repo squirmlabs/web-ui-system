@@ -1,14 +1,14 @@
 // This file is shared across the demos.
 
 import React from 'react';
-import { ListItem, ListItemIcon, ListItemText } from '../../../symbols/elements/List';
-import InboxIcon from '../../../symbols/elements/UIIcons/MoveToInbox';
-import DraftsIcon from '../../../symbols/elements/UIIcons/Drafts';
-import StarIcon from '../../../symbols/elements/UIIcons/Star';
-import SendIcon from '../../../symbols/elements/UIIcons/Send';
-import MailIcon from '../../../symbols/elements/UIIcons/Mail';
-import DeleteIcon from '../../../symbols/elements/UIIcons/Delete';
-import ReportIcon from '../../../symbols/elements/UIIcons/Report';
+import { ListItem, ListItemIcon, ListItemText } from '../../../symbols/v1/List';
+import InboxIcon from '../../../symbols/v1/UIIcons/MoveToInbox';
+import DraftsIcon from '../../../symbols/v1/UIIcons/Drafts';
+import StarIcon from '../../../symbols/v1/UIIcons/Star';
+import SendIcon from '../../../symbols/v1/UIIcons/Send';
+import MailIcon from '../../../symbols/v1/UIIcons/Mail';
+import DeleteIcon from '../../../symbols/v1/UIIcons/Delete';
+import ReportIcon from '../../../symbols/v1/UIIcons/Report';
 
 export const mailFolderListItems = (
   <div>

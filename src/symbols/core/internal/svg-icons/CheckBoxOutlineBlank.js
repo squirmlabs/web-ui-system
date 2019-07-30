@@ -1,6 +1,6 @@
 import React from 'react';
 import pure from 'recompose/pure';
-import SvgIcon from '../../../elements/SvgIcon';
+import SvgIcon from '../../../v1/SvgIcon';
 
 /**
  * @ignore - internal component.
