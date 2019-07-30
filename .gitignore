@@ -1,7 +1,3 @@
-./dist
-./node_modules
-./styleguide
-
 dist
 node_modules
 styleguide
