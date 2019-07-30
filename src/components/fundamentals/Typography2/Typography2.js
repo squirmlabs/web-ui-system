@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import UITypography2 from '@symbols/next/Typography';
+import UITypography2 from '@symbols/v2/Typography';
 import withStyles from '@symbols/core/withStyles';
 import { styles } from './styles';
 
