@@ -1,0 +1,145 @@
+.abc-avatar {
+  background: url(assets/abc-avatar-blue.svg) center no-repeat;
+  width: 115px;
+  height: 34px;
+  display: inline-block;
+  @include breakpoint() {
+    display: none;
+  }
+}
+
+.abc-logo-text {
+  background: url(assets/Storyline_logo.svg) center no-repeat;
+  background-size: cover;
+  width: 136px;
+  height: 38px;
+  display: inline-block;
+  @include breakpoint() {
+    background: url(assets/abc-logo-mobile.png) left no-repeat;
+    background-size: contain;
+    width: 95px;
+  }
+}
+
+.stories-icon {
+  background: url(assets/stories-nav-tv-icon.svg) center no-repeat;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 6px;
+  @include breakpoint() {
+    background: url(assets/stories-nav-tv-icon-20px.svg) center no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+  }
+}
+
+.notes-icon {
+  background-image: url(assets/note-icon.svg);
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include breakpoint() {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+  }
+}
+
+.feedback-icon {
+  background: url(assets/feedback-icon.svg) center no-repeat;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  padding-top: 6px;
+  margin-right: 6px;
+  background-size: cover;
+  @include breakpoint() {
+    background: url(assets/feedback-icon.svg) center no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+  }
+}
+
+.help-icon {
+  background: url(assets/question.svg) center no-repeat;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 1px 6px 0 0;
+  background-size: cover;
+  vertical-align: text-top;
+  @include breakpoint() {
+    width: 23px;
+    height: 23px;
+    margin: -2px 0 0 0;
+    vertical-align: middle;
+  }
+}
+
+.search-icon {
+  background: url(assets/magnifying-glass.svg) center no-repeat;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 6px;
+  background-size: cover;
+  @include breakpoint() {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+  }
+}
+
+.write-icon {
+  background: url(assets/write-icon.svg) center no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.border-dotted-bottom {
+  height: 2px;
+  border-image-source: url('assets/dotted-border-light-blue.svg');
+  border-image-slice: 2;
+  border-image-repeat: repeat;
+  border-bottom: 2px dotted #b7cfef;
+}
+
+.border-dotted-link {
+  height: 0.5px;
+  border: 0px solid transparent;
+  border-image-source: url('assets/dotted-border-link-blue.svg');
+  border-image-slice: 2;
+  border-image-repeat: repeat;
+  border-bottom: 0.5px dotted #6598de;
+  text-decoration: none;
+  color: $grey-2;
+}
+
+.attachment-icon {
+  background: url(assets/attachment-icon.svg) center no-repeat;
+  width: 19px;
+  height: 16px;
+  margin-right: 5px;
+  // &.pdf {
+  //   margin: 0px 20px;
+  //   background-image: url('assets/icon-adobe-pdf-document.png');
+  // }
+  // &.img {
+  //   margin: 0px 20px;
+  //   background-image: url('assets/icon-document-blank.png');
+  // }
+}
+
+.plus-icon {
+  background: url(assets/plus-icon.svg) center no-repeat;
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,89 @@
+/*doc
+---
+title: Grid
+name: grid
+category: Base CSS
+---
+
+Everything should be wrapped within a div of class <code>wrapper</code>.
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'proxima-nova', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $grey-6;
+}
+
+.wrapper {
+  display: flex;
+  .container {
+    width: 100%;
+    &.default {
+      // ORIGINAL
+      width: 1132px;
+      margin: 114px auto 54px auto; // Need for reference
+      border-radius: 6px;
+    }
+    &.vipA {
+      //FLUID
+      margin: 0px 0px;
+    }
+
+    background: white;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px #e8e8e8;
+    min-height: 852px;
+    // overflow: hidden;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: auto;
+      min-height: 100vh;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+  .Sidebar {
+    min-width: 368px;
+
+    &.default {
+      // ORIGINAL
+      margin: 60px 0px;
+    }
+    &.bgWhite {
+      background-color: #ffffff;
+    }
+    &.vipA {
+      // FLUID
+      padding: 0px;
+      margin: 0px 0px;
+    }
+  }
+  .Sidebar__closed {
+    min-width: 40px;
+    background-color:transparent;
+
+    &.default {
+      // ORIGINAL
+      margin: 80px 0px;
+    }
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.flex-container {
+  display: flex;
+}

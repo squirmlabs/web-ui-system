@@ -1,0 +1,27 @@
+{
+  "name": "squirmlabs-raphael",
+  "version": "1.0.0",
+  "description": "Extends raphael. React library.",
+  "main": "entry.js",
+  "scripts": {
+    "test": "devtest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squirmsound/squirmlabs-raphael.git"
+  },
+  "keywords": [
+    "raphael",
+    "react",
+    "primitives",
+    "theory",
+    "js",
+    "visualjs"
+  ],
+  "author": "squirmlabs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/squirmsound/squirmlabs-raphael/issues"
+  },
+  "homepage": "https://github.com/squirmsound/squirmlabs-raphael#readme"
+}

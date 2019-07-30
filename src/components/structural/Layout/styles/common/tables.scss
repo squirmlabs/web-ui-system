@@ -1,0 +1,116 @@
+@import 'common/colors';
+/*doc
+---
+title: Tables
+name: tables
+category: Tables
+---
+
+Everything should be wrapped within a div of class <code>wrapper</code>.
+
+*/
+table {
+    border-collapse: collapse;
+
+    &.full-width {
+        width: 100%;
+    }
+
+    thead {
+        background: $grey-6;
+
+        tr {
+            th {
+                text-align: left;
+                padding: 0 20px;
+                height: 40px;
+                font-weight: 600;
+                color: $grey-2;
+                text-transform: uppercase;
+                font-size: 14px;
+
+                &.correspondents-header {
+                    @include breakpoint() {
+                        display: none;
+                    }
+                }
+            }
+
+            &:first-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid $grey-6;
+            background: rgba(255, 255, 255, 0.6);
+
+            td {
+                padding: 24px 20px;
+                @include breakpoint() {
+                    height: auto;
+                    padding: 12px 20px;
+                }
+
+                &:first-child {
+                    padding-left: 20px;
+                }
+
+                &:last-child {
+                    padding-right: 20px;
+                }
+
+                // .slug {
+                //     font-weight: 600;
+                //     font-size: 22px;
+                //     color: $blue-3;
+                //     text-transform: uppercase;
+                //     @include breakpoint() {
+                //         font-size: 16px;
+                //     }
+                // }
+                //
+                // &.correspondents-cell {
+                //     @include breakpoint() {
+                //         display: none;
+                //     }
+                // }
+                //
+                // .correspondents--mobile {
+                //     display: none;
+                //     margin-top: 6px;
+                //
+                //     &:empty {
+                //         margin-top: 0;
+                //     }
+                //     @include breakpoint() {
+                //         display: block;
+                //     }
+                // }
+                //
+                // .platforms {
+                //     margin-top: 6px;
+                //
+                //     &:empty {
+                //         margin-top: 0;
+                //     }
+                //     @include breakpoint() {
+                //         display: none;
+                //     }
+                //
+                //     .chosen-filter {
+                //         color: $blue-4;
+                //         font-weight: bold;
+                //     }
+                // }
+                //
+                // .platform {
+                //     color: $grey-2;
+                //     font-size: 14px;
+                // }
+            }
+        }
+    }
+}

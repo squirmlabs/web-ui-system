@@ -1,0 +1,38 @@
+@mixin rounded-border-input($cursor) {
+  border: 1px solid $grey-4;
+  border-radius: 6px;
+  padding: 0 20px;
+  background: white;
+
+  &:hover {
+    cursor: $cursor;
+  }
+
+  &:focus {
+    outline: 0;
+    border: solid 1px $teal-4;
+  }
+}
+
+@mixin rounded-border-textarea($cursor) {
+  border: 1px solid $grey-4;
+  border-radius: 6px;
+  padding: 10px 20px;
+  background: white;
+
+  &:hover {
+    cursor: $cursor;
+  }
+
+  &:focus {
+    outline: 0;
+    border: solid 1px $teal-4;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

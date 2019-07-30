@@ -1,0 +1,21 @@
+.wide-message {
+    background: white;
+    margin: 10%;
+    padding: 5%;
+    text-align: center;
+
+    h2 {
+      color: $blue-1;
+      padding: 30px 0;
+    }
+
+    span {
+      padding: 10px 0;
+      display: block;
+    }
+
+    a {
+      color: $blue-3;
+      display: block;
+    }
+}

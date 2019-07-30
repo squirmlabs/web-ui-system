@@ -1,0 +1,195 @@
+header {
+  height: 60px;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  @include breakpoint() {
+    position: relative;
+  }
+
+  &.default {
+    background: $blue-1;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &.vipA {
+    position: relative;
+    &.header-logo {
+      margin: 0px 3px;
+    }
+  }
+
+
+  .header-logo {
+    display: inline-block;
+    .header-image {
+      display: flex;
+      align-items: center;
+      height: 60px;
+    }
+  }
+
+  .header-content {
+    background: $blue-1;
+
+    display: flex;
+    width: 100%;
+    margin: auto;
+    @include breakpoint() {
+      display: block;
+      min-width: 300px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .pill {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: $teal-3;
+      border: solid 1px $teal-3;
+      color: white;
+      font-size: 12px;
+      margin-left: 10px;
+      font-weight: bold;
+      padding: 3px 5px;
+    }
+
+    .nav-family {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+      min-width: 700px;
+      @include breakpoint() {
+        float: right;
+        min-width: 0;
+      }
+
+      // .header-nav {
+      //     display: inline-block;
+      //     @include breakpoint() {
+      //         float: left;
+      //     }
+      //
+      //     &.right-nav {
+      //         float: right;
+      //         position: absolute;
+      //         right: 0;
+      //
+      //         li {
+      //             float: left;
+      //         }
+      //         @include breakpoint() {
+      //             position: relative;
+      //         }
+      //     }
+      //
+      //     ul {
+      //         list-style: none;
+      //         margin: 0 0 0 30px;
+      //         padding: 0;
+      //         @include breakpoint {
+      //             margin: 0;
+      //         }
+      //
+      //         li {
+      //             display: inline-block;
+      //             text-align: right;
+      //             cursor: pointer;
+      //
+      //             &:hover {
+      //                 background: $blue-2;
+      //             }
+      //
+      //             &.active {
+      //                 background: $blue-3;
+      //             }
+      //
+      //             a {
+      //                 color: #fff;
+      //                 display: block;
+      //                 height: 60px;
+      //                 line-height: 60px;
+      //                 font-size: 16px;
+      //                 padding: 0 20px;
+      //                 font-weight: 600;
+      //                 text-decoration: none;
+      //                 @include breakpoint() {
+      //                     display: flex;
+      //                     align-items: center;
+      //
+      //                     .header-link-text {
+      //                         display: none;
+      //
+      //                         &.persist-text {
+      //                             display: block;
+      //                         }
+      //                     }
+      //                 }
+      //
+      //                 &:visited {
+      //                     color: #fff;
+      //                 }
+      //             }
+      //
+      //             &.userMenu {
+      //                 cursor: auto;
+      //                 @include breakpoint() {
+      //                     display: none;
+      //                 }
+      //                 &:hover,
+      //                 &.active {
+      //                     background: none;
+      //                 }
+      //             }
+      //         }
+      //     }
+      // }
+      //
+
+      .header-nav {
+        display: inline-block;
+        @include breakpoint() {
+          float: left;
+        }
+
+        &.left-nav {
+          @include breakpoint() {
+            // display: none;
+          }
+          & ul {
+            display: flex;
+          }
+        }
+
+        &.right-nav {
+          float: right;
+          // position: absolute;
+          // right: 0;
+          @include breakpoint() {
+            // position: relative;
+          }
+
+          li {
+            float: left;
+          }
+        }
+
+        ul {
+          list-style: none;
+          margin: 0 0 0 30px;
+          padding: 0;
+          @include breakpoint {
+            margin: 0;
+          }
+
+          li {
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39 (31667) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ASSETS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dotted-border" fill="#6598de">
+            <circle id="2px-dot---line-pattern" cx="1" cy="1" r="1"></circle>
+            <circle id="2px-dot---line-pattern-copy" cx="5" cy="1" r="1"></circle>
+            <circle id="2px-dot---line-pattern-copy-2" cx="9" cy="1" r="1"></circle>
+            <circle id="2px-dot---line-pattern-copy-3" cx="9" cy="5" r="1"></circle>
+            <circle id="2px-dot---line-pattern-copy-4" cx="9" cy="9" r="1"></circle>
+            <circle id="2px-dot---line-pattern-copy-5" cx="5" cy="9" r="1"></circle>
+            <circle id="2px-dot---line-pattern-copy-6" cx="1" cy="9" r="1"></circle>
+            <circle id="2px-dot---line-pattern-copy-7" cx="1" cy="5" r="1"></circle>
+        </g>
+    </g>
+</svg>

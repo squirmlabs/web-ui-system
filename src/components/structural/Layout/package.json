@@ -1,0 +1,11 @@
+{
+  "name": "datgui-storyline-layout",
+  "version": "1.0.0",
+  "description": "Layout component",
+  "main": "Layout.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian A Aguirre",
+  "license": "ISC"
+}

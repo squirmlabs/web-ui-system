@@ -1,0 +1,5 @@
+Layout:
+
+```jsx
+<Layout />
+```

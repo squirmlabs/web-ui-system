@@ -1,0 +1,351 @@
+@import "common/colors";
+
+.stories-list {
+    padding: 36px 54px 20px;
+    @include breakpoint() {
+        padding: 24px;
+    }
+
+    .stories-list-header {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        margin-bottom: 15px;
+        @include breakpoint() {
+            flex-direction: row;
+            align-items: initial;
+            height: auto;
+        }
+
+        .left-side {
+            display: flex;
+            align-items: center;
+            @include breakpoint() {
+                display: block;
+                align-items: initial;
+            }
+        }
+
+        .right-side {
+            margin-left: auto;
+            @include breakpoint() {
+                padding-top: 10px;
+            }
+        }
+
+        .create-story {
+            height: 26px;
+            text-decoration: none;
+            line-height: 30px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+
+            .task-button {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+
+                .plus-icon {
+                    display: none;
+                }
+                @include breakpoint() {
+                    .plus-icon {
+                        display: block;
+                    }
+
+                    .text {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .h1 {
+            // flex-grow: 2;
+            margin-right: 20px;
+            white-space: nowrap;
+            @include breakpoint() {
+                white-space: normal;
+            }
+        }
+
+        .filter-container {
+            display: flex;
+            align-items: center;
+            @include breakpoint() {
+                display: block;
+            }
+
+            .filter-by-text {
+                font-weight: bold;
+                color: $grey-2;
+                white-space: nowrap;
+                @include breakpoint() {
+                    display: inline-block;
+                    margin-top: 8px;
+                }
+            }
+
+            .filter-tags {
+                // display: inline-block;
+                // position: relative;
+                // top: -2px;
+                margin: 0 15px;
+                // height: 10px;
+                @include breakpoint() {
+                    margin: 5px -5px;
+                }
+            }
+        }
+    }
+
+    .stories-list-body {
+        display: flex;
+        @include breakpoint() {
+            margin: 0 -24px;
+        }
+
+        .stories-list-table {
+            margin-top: 15px;
+
+            tbody {
+                tr {
+                    &:hover {
+                        background: $teal-5;
+                        cursor: pointer;
+                    }
+
+                    td {
+                        .dateLastModified {
+                            font-size: 14px;
+                            color: $grey-3;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.load-more-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px 108px;
+
+    &.note-comments-load-more-wrapper {
+        padding: 31px 0 30px;
+        border-top: solid 1px $grey-5;
+    }
+
+    .load-more {
+        border: none;
+        color: $teal-3;
+        background: url("assets/load-more-arrow.svg") no-repeat 100% 45%;
+        padding-right: 25px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $teal-4;
+        }
+    }
+}
+
+.story-items-list {
+    width: 100%;
+
+    .story-col {
+        width: 50%;
+        @include breakpoint() {
+            width: 60%;
+        }
+    }
+
+    .correspondents-col {
+        width: 25%;
+        @include breakpoint() {
+            display: none !important;
+        }
+    }
+
+    .date-col {
+        width: 25%;
+        @include breakpoint() {
+            width: 40%;
+        }
+    }
+
+    .story-items-list-header {
+        display: flex;
+        background: $grey-6;
+
+        .header-item {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: 0 20px;
+            height: 40px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+    }
+
+    .story-items {
+        .story-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            border: 1px solid #FFF;
+            border-bottom: 1px solid #f5f5f5;
+            border-top: none;
+            -webkit-transition: background 0.1s ease;
+            -moz-transition: background 0.1s ease;
+            transition: background 0.1s ease;
+
+            &.private-story {
+                // box-shadow: inset 0px 0px 0px 1px #fff2cd;
+                // background: #fffdf9;
+                // border: 1px solid #f5f5f5;
+                // border-top: none;
+                // @include breakpoint() {
+                //     border: none;
+                // }
+            }
+
+            &:hover {
+                background: #fbfbfb;
+                border: 1px solid #f5f5f5;
+                border-top: none;
+                -webkit-transition: background 0s ease;
+                -moz-transition: background 0s ease;
+                transition: background 0s ease;
+            }
+
+            .col-item {
+                padding: 24px 20px;
+                @include breakpoint() {
+                    padding: 14px 20px;
+                }
+            }
+
+            .slug-container {
+                display: flex;
+                align-items: center;
+                .private-badge {
+                    display: none;
+                    border: 1px solid #e8b627;
+                    background: #fffdf6;
+                    border-radius: 2px;
+                    margin-right: 8px;
+                    font-size: 0.7em;
+                    padding: 3px 4px 2px 5px;
+                    color: #a05800;
+                    white-space: nowrap;
+                    @include breakpoint() {
+                        margin-right: 10px;
+                    }
+                }
+                .slug-text {
+                    font-weight: 600;
+                    font-size: 22px;
+                    color: $blue-3;
+                    text-transform: uppercase;
+                    @include breakpoint() {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &.private-story .private-badge {
+                display: inline-block;
+            }
+
+            &.correspondents-cell {
+                @include breakpoint() {
+                    display: none;
+                }
+            }
+
+            .correspondents--mobile {
+                display: none;
+                margin-top: 6px;
+                @include breakpoint() {
+                    display: block;
+                }
+
+                &:empty {
+                    margin-top: 0;
+                }
+            }
+
+            .platforms {
+                margin-top: 6px;
+                @include breakpoint() {
+                    display: none;
+                }
+
+                &:empty {
+                    margin-top: 0;
+                }
+
+                .chosen-filter {
+                    color: $blue-4;
+                    font-weight: bold;
+                }
+            }
+
+            .platform {
+                color: $grey-2;
+                font-size: 14px;
+            }
+
+            & .action-btns {
+                position: absolute;
+                display: flex;
+                color: $grey-3;
+                white-space: nowrap;
+                font-size: 14px;
+                margin-top: 6px;
+                margin-right: 14px;
+                opacity: 0;
+                // font-weight: 600;
+
+                @include breakpoint() {
+                    position: relative;
+                    display: block;
+                    opacity: 1;
+                }
+
+                & .action-btn {
+                    cursor: pointer;
+                    margin-right: 20px;
+                    margin-bottom: 6px;
+                    &:hover {
+                        color: $grey-2;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &.delete-btn {
+                        &:hover {
+                            color: #822828;
+                        }
+                    }
+                }
+            }
+
+            &:hover .action-btns {
+                opacity: 1;
+            }
+        }
+    }
+}

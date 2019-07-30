@@ -1,0 +1,11 @@
+{
+  "name": "symbols-touch-ripple",
+  "version": "1.0.0",
+  "description": "Responsible for transition lifecycle for ripple",
+  "main": "TouchRipple.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian A Aguirre",
+  "license": "ISC"
+}

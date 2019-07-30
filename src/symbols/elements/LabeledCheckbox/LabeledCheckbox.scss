@@ -1,0 +1,39 @@
+@import '../../layout/styles/common/colors';
+
+.LabeledCheckbox {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    &__container {
+        display: flex;
+    }
+    &__input {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $grey-3;
+        border-radius: 4px;
+        margin-right: 9px;
+        -webkit-transition: all ease 0.2s;
+        -moz-transition: all ease 0.2s;
+        transition: all ease 0.2s;
+    }
+    &:hover &__input {
+        border-color: $grey-2;
+    }
+    &--selected &__input {
+        background: url('./images/check-icon.svg') 3px center no-repeat $teal-4;
+        border-color: #30a88f;
+    }
+    &--selected:hover &__input {
+        border-color: #1f806b;
+    }
+    &__label {
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $grey-3;
+    }
+    &:hover &__label {
+        color: $grey-2;
+    }
+}

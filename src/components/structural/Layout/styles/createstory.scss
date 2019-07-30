@@ -1,0 +1,85 @@
+@import "common/colors";
+
+/*doc
+---
+title: Buttons
+name: button
+category: Base CSS
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example
+<button class="btn btnDefault">Click</button>
+<a class="btn btnDefault" href="http://trulia.com">Don't click</a>
+```
+
+If your button is actually a link to another page, please use the
+`<a>` element, while if your button performs an action, such as submitting
+a form or triggering some javascript event, then use a `<button>` element.
+
+##Button Sizes
+There are three 3 sizes for buttons: Large, medium (default)
+and small. Simply apply the size modifier class for the desired size.
+There is also an additional modifier that will make the button take the
+full width of the container. It may be used with the any of the button
+size and style modifiers.
+
+Button                                                            | Modifier Class
+----------------------------------------------------------------- | -----------------
+<button class="btn btnDefault btnLrg">Large</button>              | `btn btnDefault btnLrg`
+<button class="btn btnDefault">Default</button>                   | `btn btnDefault`
+<button class="btn btnDefault btnSml">Small</button>              | `btn btnDefault btnSml`
+<button class="btn btnDefault btnFullWidth">Full width</button>   | `btn btnDefault btnFullWidth`
+*/
+.story-form {
+  .create-story-header {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    padding: 54px 54px 26px 54px;
+    background: $blue-6;
+    @include breakpoint() {
+      padding: 24px;
+    }
+    .border-dotted-bottom {
+      height: 2px;
+    }
+  }
+  .create-story-body {
+    width: 100%;
+    padding: 54px;
+    border-top: 1px solid $grey-5;
+    @include breakpoint() {
+      padding: 24px;
+    }
+    .create-story-fields {
+      margin-bottom: 38px;
+      @include breakpoint() {
+        margin-bottom: 24px;
+      }
+      .options {
+        padding: 22px;
+      }
+    }
+    button {
+      width: 140px;
+      height: 50px;
+      color: white;
+      background-color: $teal-3;
+      border: 0;
+      font-family: "proxima-nova", sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      outline: 0;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        background: $teal-4;
+        color: white;
+        box-shadow: 1px 1px 0 0 $teal-3;
+      }
+    }
+  }
+}

@@ -1,0 +1,714 @@
+body {
+  @include breakpoint() {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+div .middle {
+  width: 14px;
+}
+
+.assignee {
+  position: relative;
+  // width: 50%;
+  // margin-right: 15px;
+  // flex-grow: 1;
+  width: 42%;
+  margin-bottom: 12px;
+  @include breakpoint() {
+    width: auto;
+  }
+}
+
+.assignee input {
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+}
+
+.assignee select {
+  width: 100%;
+  clear: both;
+}
+
+@-webkit-keyframes move-bg-animation {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 396px 0%;
+  }
+}
+
+.story-details {
+  display: none;
+
+  .story-details-header {
+    // border-top-right-radius: 6px;
+    // border-top-left-radius: 6px;
+    background: $blue-6;
+    // overflow: hidden;
+
+    .private-header {
+      position: relative;
+      padding: 10px 20px;
+      font-size: 1em;
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+      color: #4c4103;
+      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe554+0,edd100+100 */
+      background: #ffe554; /* Old browsers */
+      background: -moz-linear-gradient(
+        top,
+        #ffe554 0%,
+        #edd100 100%
+      ); /* FF3.6-15 */
+      background: -webkit-linear-gradient(
+        top,
+        #ffe554 0%,
+        #edd100 100%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(
+        to bottom,
+        #ffe554 0%,
+        #edd100 100%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(
+          startColorstr="#ffe554",
+          endColorstr="#edd100",
+          GradientType=0
+        ); /* IE6-9 */
+      border: 1px solid #ceb83a;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+      @include breakpoint() {
+        border-radius: 0;
+      }
+
+      .stripe-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.3;
+        background-size: 780px;
+        // -webkit-animation-name: move-bg-animation;
+        // -webkit-animation-duration: 50s;
+        // -webkit-animation-timing-function: linear;
+        // -webkit-animation-iteration-count: infinite;
+      }
+    }
+
+    .story-details-header-wrapper {
+      padding: 54px 54px 0;
+      @include breakpoint() {
+        padding: 0;
+        .slug {
+          padding: 24px;
+        }
+      }
+
+      .slug-container {
+        display: flex;
+        align-items: center;
+        @include breakpoint() {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+        }
+        .slug {
+          display: inline-block;
+        }
+        .private-badge {
+          display: none;
+          border-radius: 3px;
+          font-size: 0.9em;
+          padding: 5px 9px;
+          color: #fff;
+          white-space: nowrap;
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+          margin-left: 20px;
+          background: #1f3b67;
+          @include breakpoint() {
+            margin: 20px 25px 0 25px;
+          }
+        }
+      }
+    }
+
+    .subnav {
+      list-style: none;
+      margin: 38px 0 0;
+      padding: 0;
+      background: transparent;
+      @include breakpoint() {
+        margin: 0;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      li {
+        display: inline-block;
+        text-align: center;
+
+        a {
+          display: block;
+          padding: 0 26px;
+          @media (max-width: 460px) {
+            padding: 0 15px;
+          }
+          height: 40px;
+          line-height: 40px;
+          background: transparent;
+          text-decoration: none;
+          font-weight: 600;
+          box-sizing: content-box;
+          color: $blue-4;
+          border-right: 1px solid rgba(232, 232, 232, 0);
+          border-left: 1px solid rgba(232, 232, 232, 0);
+
+          &.active {
+            background: white;
+            border: 1px solid $grey-5;
+            border-bottom: 0;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            color: $blue-3;
+          }
+        }
+        &:first-child a {
+          @include breakpoint() {
+            border-left: none;
+          }
+        }
+        .notification-count-badge {
+          color: #fff;
+          margin-left: 6px;
+          padding: 3px 6px 2px 6px;
+          background: #e60000;
+          border-radius: 2px;
+          box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4);
+          line-height: normal;
+          @include breakpoint {
+            // display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.show {
+    display: block;
+  }
+
+  &.private-story {
+    .story-details-header-wrapper {
+      .slug-container {
+        .slug {
+          @include breakpoint() {
+            padding-top: 14px;
+          }
+        }
+        .private-badge {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .story-details-body {
+    border-top: 1px solid $grey-5;
+    padding: 54px 54px 108px;
+    margin-top: -1px;
+    box-sizing: content-box;
+    @include breakpoint() {
+      padding: 24px 24px 0;
+    }
+  }
+
+  .staffing-form {
+    // margin-bottom: 54px;
+    @include breakpoint() {
+      margin: 24px 0;
+    }
+
+    .expand-button-container {
+      display: none;
+      @include breakpoint() {
+        display: block;
+      }
+
+      .expand-button {
+        display: flex;
+        align-items: center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        background: none;
+        color: $teal-3;
+        padding: 0;
+        text-align: left;
+
+        &:hover {
+          color: $teal-4;
+          cursor: pointer;
+        }
+
+        &:active {
+          color: $teal-2;
+        }
+
+        .fa {
+          font-size: 2em;
+          margin-right: 12px;
+        }
+      }
+    }
+
+    &.expanded .expand-button-container {
+      display: none;
+    }
+
+    .space-top {
+      margin-top: 14px;
+    }
+
+    .details {
+      width: 100%;
+      float: right;
+    }
+
+    .add-assignment {
+      display: flex;
+      @include breakpoint() {
+        display: none;
+      }
+
+      label {
+        margin-bottom: 20px;
+      }
+
+      .label {
+        width: 10%;
+        @include breakpoint() {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &.expanded .add-assignment {
+      @include breakpoint() {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .input-row {
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-flow: row wrap;
+      align-content: space-between;
+      justify-content: space-between;
+      // padding-left: 14px;
+      width: 90%;
+      flex-grow: 1;
+      @include breakpoint() {
+        flex-direction: column;
+        margin-right: 0;
+        position: relative;
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .styled-select {
+        width: 27.6%;
+        margin: 0;
+        // flex-grow: 1;
+        @include breakpoint() {
+          width: 100%;
+          margin: 10px 0;
+        }
+      }
+
+      .location-container {
+        flex-grow: 0.3;
+        page-break-after: always;
+        /* CSS 2.1 syntax */
+        break-after: always;
+        /* New syntax */
+        margin-right: 12px;
+
+        input {
+          margin: 0;
+          width: 100%;
+        }
+        @include breakpoint() {
+          width: 100%;
+          margin: 10px 0;
+        }
+      }
+
+      .details-container {
+        flex-grow: 1;
+        page-break-after: always;
+        /* CSS 2.1 syntax */
+        break-after: always;
+        /* New syntax */
+        margin-right: 12px;
+
+        input {
+          margin: 0;
+          width: 100%;
+        }
+        @include breakpoint() {
+          width: 100%;
+          margin: 10px 0;
+        }
+      }
+
+      .search-items {
+        width: 100%;
+        margin: 0;
+        padding: 8px 0;
+        border: 1px solid #ccc;
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        border: solid 1px #dedede;
+        border-radius: 6px;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+        @include breakpoint() {
+          margin: 0;
+          top: 50px;
+        }
+
+        .search-item {
+          padding: 12px 16px;
+          font-size: 14px;
+          list-style: none;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #ebfaf7;
+          }
+
+          &:active {
+            background-color: #caf1e9;
+          }
+
+          .item-label {
+            color: #000;
+            margin-bottom: 2px;
+          }
+
+          .item-sublabel {
+            color: #666666;
+          }
+
+          &.no-results {
+            color: #ff4545;
+            cursor: normal;
+            background-color: #fff;
+
+            &:active,
+            &:hover {
+              cursor: inherit;
+              background-color: inherit;
+            }
+
+            & .item-label {
+              color: inherit;
+              margin-bottom: 0;
+              font-style: italic;
+            }
+          }
+        }
+      }
+
+      .button-container {
+        // width: 10%;
+        @include breakpoint() {
+          width: 100%;
+        }
+      }
+    }
+
+    .button-container {
+      //   float: right;
+      .plus-add-assignment {
+        background: $teal-3;
+        border: 0;
+        height: 50px;
+        color: white;
+        box-shadow: none;
+
+        &:focus {
+          outline: 0;
+        }
+
+        &:disabled,
+        &[disabled="disabled"] {
+          background: $grey-5;
+          pointer-events: none;
+        }
+        @include breakpoint() {
+          margin-top: 10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.staffing {
+  .staffing-table-container {
+    display: none;
+    pointer-events: none;
+    margin-bottom: 54px;
+    @include breakpoint() {
+      margin-bottom: 0;
+    }
+
+    &.show {
+      display: block;
+      pointer-events: auto;
+    }
+
+    .staffing-table {
+      color: $grey-2;
+      font-size: 14px;
+      @include breakpoint() {
+        // overflow: hidden;
+      }
+
+      thead {
+        background: $grey-5;
+      }
+
+      tbody {
+        tr {
+          th {
+            padding-top: 13px;
+            padding-bottom: 13px;
+            font-size: 14px;
+            color: $grey-2;
+
+            &.table-header-border {
+              padding: 0;
+            }
+          }
+
+          &:hover {
+            background: #fdfdfd;
+          }
+        }
+
+        .unassign-button {
+          background: $teal-5 url("assets/unassign-icon-green.svg") no-repeat
+            center;
+          border: none;
+          width: 30px;
+          height: 30px;
+          float: right;
+          cursor: pointer;
+
+          &:hover {
+            background: $teal-4 url("assets/unassign-icon-white.svg") no-repeat
+              center;
+            box-shadow: 1px 1px 0 0 #30a88f;
+            box-shadow: 1px 1px 0 0 $teal-3;
+          }
+        }
+      }
+
+      .current-assignment-row {
+        &.no-bottom-border {
+          border-bottom: none;
+        }
+      }
+      .no-current-assignments-row {
+        text-align: center;
+        border-bottom: none;
+        color: $grey-4;
+        &:hover {
+          background: none;
+        }
+      }
+      .previous-assignments-spacer {
+        padding: 10px;
+        margin: 0;
+        float: none;
+        @include breakpoint() {
+          border: none;
+        }
+        &:hover {
+          background: none;
+        }
+        & td {
+          padding: 10px;
+          margin: 0;
+        }
+      }
+      .previous-assignments-header {
+        margin: 0;
+        float: none;
+        border: none;
+        @include breakpoint() {
+          padding: 0;
+        }
+        & td {
+          padding: 12px;
+          // background: $grey-5;
+          background: #f1f1f1;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+          margin: 0;
+          @include breakpoint() {
+            display: block;
+            float: none;
+            padding: 20px;
+            text-align: left;
+          }
+        }
+      }
+      .previous-assignment-row {
+        background: rgba(244, 244, 244, 0.6);
+        color: rgba(102, 102, 102, 0.6);
+        border-bottom: 1px solid #ececec;
+        & textarea {
+          opacity: 0.6;
+        }
+        @include breakpoint() {
+          border-bottom: 1px solid #ececec;
+        }
+        &:hover {
+          background: rgba(244, 244, 244, 0.6);
+        }
+        &.no-bottom-border {
+          border-bottom: none;
+        }
+        & .InlineProfileCard {
+          .InlineProfileCard__name {
+            opacity: 0.6;
+          }
+          &--active {
+            .InlineProfileCard__name {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .editable-field {
+        height: auto;
+        border: 0;
+        background: none;
+        color: #666666;
+        padding: 0;
+        margin: 0;
+        resize: none;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+    @include breakpoint() {
+      margin: 0 -24px;
+
+      table,
+      tbody,
+      td,
+      th,
+      thead,
+      tr {
+        display: block;
+      }
+
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      tr {
+        border-bottom: 1px solid $grey-6;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+        padding-left: 33%;
+        display: flex;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        &:last-of-type {
+          /* this is the cancel button */
+          background: clear;
+          margin-top: -90px;
+          float: right;
+        }
+      }
+
+      td.mobile-collapsable:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 8px;
+        left: 25px;
+        width: 20%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+
+      td.mobile-collapsable:nth-of-type(1):before {
+        content: "UNIT";
+      }
+
+      td.mobile-collapsable:nth-of-type(2):before {
+        content: "ROLE";
+      }
+
+      td.mobile-collapsable:nth-of-type(3):before {
+        content: "NAME";
+      }
+
+      td.mobile-collapsable:nth-of-type(4):before {
+        content: "LOCATION";
+      }
+
+      td.mobile-collapsable:nth-of-type(5):before {
+        content: "DETAILS";
+      }
+
+      table:before {
+        content: "CURRENT ASSIGNMENTS";
+        font-weight: bold;
+        background: $grey-5;
+        display: block;
+        padding: 20px;
+        width: 100%;
+      }
+    }
+  }
+}

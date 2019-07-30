@@ -1,0 +1,83 @@
+.slug {
+  .slug-error {
+    display: none;
+  }
+
+  .slug-text {
+    height: 43px;
+    @include h1-font;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px dashed $blue-1;
+    display: inline;
+
+    &:hover {
+      color: $blue-4;
+      border-color: $blue-4;
+
+      +.edit-icon {
+        margin-left: 5px;
+        width: 15px;
+        height: 15px;
+        background-image: url(assets/icon-pencil.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        display: inline-block;
+        bottom: 0px;
+        margin-left: 7px;
+      }
+    }
+
+    &.slug-input {
+      width: 100%;
+      margin: 0;
+      +.edit-icon {
+        display: none;
+      }
+    }
+  }
+
+  .slug-input {
+    @include placeholder {
+      @include h1-font;
+      opacity: 1 !important;
+      @include breakpoint() {
+        font-size: 24px;
+      }
+    }
+
+    @include breakpoint() {
+      font-size: 24px;
+      width: 100%;
+    }
+
+    &:focus {
+      outline: 0;
+      color: $blue-4;
+      border-color: $blue-4;
+
+      @include placeholder {
+        color: $blue-4;
+      }
+    }
+  }
+}
+
+.error {
+  .slug-text {
+    border: 0;
+    border-bottom: 1px dashed $red-3;
+  }
+
+  .slug-error {
+    font-family: "proxima-nova", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.17;
+    color: $red-3;
+    font-style: italic;
+    display: block;
+    padding-top: 3px;
+  }
+}

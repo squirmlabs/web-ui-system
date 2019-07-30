@@ -1,0 +1,5 @@
+ShapeRectangle:
+
+```jsx
+<ShapeRectangle />
+```

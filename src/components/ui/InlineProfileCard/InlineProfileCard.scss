@@ -1,0 +1,118 @@
+$blue-1: #1f3b67;
+$blue-2: #2e538f;
+$blue-3: #3467b0;
+$blue-4: #6598de;
+$blue-5: #b7cfef;
+$blue-6: #eaf1fb;
+
+$teal-1: #0f6660;
+$teal-2: #177b66;
+$teal-3: #30a88f;
+$teal-4: #3dd2b3;
+$teal-5: #ebfaf7;
+
+$red-1: #99171d;
+$red-2: #dd0c0c;
+$red-3: #ff4545;
+$red-4: #ff9090;
+$red-5: #fbc8c8;
+
+$orange-1: #d06600;
+$orange-2: #fd891a;
+$orange-3: #fdb01a;
+$orange-4: #fed27e;
+$orange-5: #fff3de;
+
+$green-1: #417505;
+$green-2: #6cb31b;
+$green-3: #8ae622;
+$green-4: #b9f277;
+$green-5: #edffd9;
+
+$grey-1: #333333;
+$grey-2: #666666;
+$grey-3: #939393;
+$grey-4: rgba(34, 36, 38, 0.15);
+$grey-5: #e8e8e8;
+$grey-6: #eeeeee;
+$grey-7: #f4f4f4;
+
+
+.InlineProfileCard {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.15em;
+  & a {
+    color: $blue-3;
+    text-decoration: none;
+  }
+  & a:hover {
+    color: $blue-4;
+  }
+  &__name {
+    z-index: 2;
+    color: $blue-3;
+    white-space: nowrap;
+    cursor: pointer;
+    &--in-card {
+      padding: 8px 12px;
+      border-bottom: solid 1px #e0e0e0;
+    }
+    // &:hover {
+    //     color: #0c2d5d;
+    // }
+  }
+  &__card {
+    position: absolute;
+    top: -9px;
+    left: -13px;
+    z-index: 3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    border: solid 1px #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    height: 34px;
+    transition: all 0.2s ease;
+  }
+  &--active &__card {
+    display: block;
+    opacity: 1;
+    height: 150px;
+    pointer-events: auto;
+  }
+  &__card-item {
+    position: relative;
+    margin: 10px 12px 10px 36px;
+    white-space: nowrap;
+    font-weight: normal;
+    text-transform: none;
+    color: $grey-4;
+    & .fa {
+      position: absolute;
+      color: $grey-3;
+    }
+    &--no-data {
+      color: $grey-4;
+    }
+    &--email {
+      & .fa {
+        left: -23px;
+        top: 1px;
+      }
+    }
+    &--phone {
+      & .fa {
+        left: -22px;
+        top: 1px;
+        font-size: 1.2em;
+      }
+    }
+  }
+}

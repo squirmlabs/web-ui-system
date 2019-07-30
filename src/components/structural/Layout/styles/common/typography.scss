@@ -1,0 +1,109 @@
+@import 'colors';
+
+/*doc
+---
+title: Font
+name: font
+category: Typography
+---
+
+
+We use <code>font-family: "proxima-nova", sans-serif</code> as the base font across this site.
+
+Font                                                            | Modifier Class                                    | CSS Property
+----------------------------------------------------------------- | ----------------- | -------------
+<span class="proxima-nova-light font-36px">Roboto Light</span>        | `proxima-nova-light` | `font-weight: 300`
+<span class="proxima-nova-regular font-36px">Roboto Regular</span>                  | `proxima-nova-regular` | `font-weight: 400`
+<span class="proxima-nova-medium font-36px">Roboto Medium</span>             | `proxima-nova-regular` | `font-weight: 500`
+<span class="proxima-nova-semibold font-36px">Roboto Semibold</span>  | `proxima-nova-regular` | `font-weight: 600`
+<span class="proxima-nova-bold font-36px">Roboto Bold</span> | `proxima-nova-bold` | `font-weight: 700`
+
+*/
+
+$base-font: "proxima-nova", sans-serif;
+
+@mixin hint-font {
+  font-family: $base-font;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  color: $grey-4;
+  opacity: 1;
+}
+
+@mixin label-font {
+  font-family: $base-font;
+  font-size: 14px;
+  font-weight: 600;
+  color:$grey-2;
+  text-transform: uppercase;
+}
+
+@mixin h1-font {
+  font-family: $base-font;
+  font-size: 34px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $blue-1;
+}
+
+.font-36px {
+  font-size: 36px;
+}
+
+.proxima-nova-light {
+  font-weight: 300;
+}
+
+.proxima-nova-regular {
+  font-weight: 400;
+}
+
+.proxima-nova-medium {
+  font-weight: 500;
+}
+
+.proxima-nova-semibold {
+  font-weight: 600;
+}
+
+.proxima-nova-bold {
+  font-weight: 700;
+}
+
+a {
+  color: $grey-1;
+}
+
+/*doc
+---
+title: Headers
+name: headers
+category: Typography
+---
+
+We apply the same styles on <code>h1</code> to an h1 class as well, so the following two html snippets have the same output.
+
+```html_example
+<h1>My header 1</h1>
+<div class="h1">My header 1</div>
+```
+*/
+
+h1, .h1 {
+  @include h1-font;
+  line-height: 34px;
+}
+
+.cta {
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.subtext {
+  font-size: 14px;
+  color: $grey-3;
+  font-weight: 500;
+}

@@ -1,0 +1,11 @@
+[ignore]
+.*/build
+.*/config
+.*/node_modules
+.*/scripts
+.*/templates
+.*/db
+
+[include]
+.*/src
+.*/lib

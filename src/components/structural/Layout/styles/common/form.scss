@@ -1,0 +1,525 @@
+/*doc
+---
+title: Inputs
+name: inputs
+category: Forms
+---
+
+```html_example
+<label class="sr-only" for="inputText">Slug input</label>
+<input type="text" class="slug-input" id="inputText" placeholder="Slug Input">
+```
+
+*/
+
+@import '../../../node_modules/quill/dist/quill.core.css';
+
+html {
+  font-family: 'proxima-nova', sans-serif;
+}
+
+.sr-only {
+  position: absolute !important;
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.task-button {
+  display: inline-block;
+  height: 50px;
+  background-color: $teal-3;
+  color: white;
+  line-height: 54px;
+  padding: 0 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  &:hover {
+    background: $teal-4 !important;
+    color: white;
+    box-shadow: 1px 1px 0 0 $teal-3 !important;
+  }
+  &:disabled,
+  &:disabled:hover {
+    background-color: $grey-5 !important;
+    box-shadow: none !important;
+  }
+}
+
+.task-link {
+  display: inline-block;
+  height: 50px;
+  color: $teal-3;
+  line-height: 54px;
+  padding: 0 20px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    color: $teal-4;
+  }
+}
+
+/*.editorial-form {
+  background: $grey-6;
+  border-radius: 6px;
+  border: solid 1px $teal-4;
+  .editorial-form-inner {
+    padding: 30px;
+    background-color: #fcfcfc;
+    box-shadow: inset 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    @include breakpoint() {
+      padding: 10px;
+    }
+    .files-list {
+      .border-solid-bottom {
+        border-color: $grey-4;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+          color: $grey-2;
+          font-size: 16px;
+          font-weight: 500;
+          .file-too-big-msg {
+            color: #ff4545;
+            font-style: italic;
+            .fa {
+              margin-right: 4px;
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}*/
+
+.text-box {
+  .placeholder {
+    @include hint-font;
+  }
+  textarea {
+    width: 100%;
+    height: 374px;
+    background: transparent;
+    border: none;
+    resize: none;
+    outline: 0;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: $grey-2;
+    line-height: 24px;
+    @include breakpoint() {
+      height: auto;
+    }
+  }
+}
+
+.action-bar {
+  border-top: 1px solid $teal-4;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $teal-3;
+  line-height: 50px;
+  text-align: center;
+  display: flex;
+  background: white;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  div {
+    width: 50%;
+    cursor: pointer;
+
+    .info {
+      color: $grey-2;
+      font-weight: 500;
+    }
+
+    &:hover {
+      background: $teal-4;
+      color: white;
+
+      .info {
+        color: white;
+      }
+    }
+    &.disabled {
+      &.add-note {
+        color: $grey-4;
+        cursor: not-allowed;
+      }
+      label {
+        color: $grey-4;
+      }
+      .info {
+        color: $grey-4;
+      }
+      &:hover {
+        background: none;
+        color: $teal-3;
+        label {
+          cursor: not-allowed;
+        }
+        .info {
+          cursor: not-allowed;
+        }
+        &.add-note {
+          color: $grey-4;
+          cursor: not-allowed;
+        }
+      }
+    }
+    &.upload-file {
+      border-bottom-left-radius: 6px;
+      .file-input {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+      }
+      label {
+        width: 100%;
+        display: block;
+        cursor: pointer;
+      }
+    }
+    &.add-note {
+      border-bottom-right-radius: 6px;
+      height: 50px;
+      border-left: 1px solid $teal-4;
+    }
+  }
+}
+
+.field-container {
+  display: flex;
+  margin-bottom: 38px;
+  @include breakpoint() {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  .label {
+    width: 105px;
+    margin-right: 24px;
+    text-transform: uppercase;
+    color: $grey-2;
+    font-size: 14px;
+    font-weight: 600;
+    @include breakpoint() {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+  .field {
+    flex-grow: 1;
+
+    .dropdown {
+      width: 100%;
+      .dropdown-outer {
+        width: 100%;
+      }
+      .value-container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.editor-hidden,
+.viewer-hidden,
+.autosuggest-hidden {
+  display: none;
+}
+
+.editorial-form {
+  max-width: 765px;
+  .employee-container {
+    display: none;
+    position: relative;
+    margin-bottom: 10px;
+    &.show {
+      display: block;
+    }
+  }
+  .subject-line-container {
+    display: none;
+    position: relative;
+    &.show {
+      display: block;
+    }
+    input {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .files-list {
+    background-color: #fff;
+    padding: 25px;
+    .border-solid-bottom {
+      border-color: $grey-4;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        color: $grey-2;
+        font-size: 16px;
+        font-weight: 500;
+        .file-too-big-msg {
+          color: #ff4545;
+          font-style: italic;
+          .fa {
+            margin-right: 4px;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.editor {
+  border-radius: 6px;
+  background-color: #ebfaf7;
+  border: solid 1px $grey-4;
+  position: relative;
+
+  &.focus,
+  &.ElementsForm__quill-editor--focus {
+    border: solid 1px $teal-4;
+    & .ql-container {
+      background-color: #fbfbfb;
+    }
+  }
+
+  .ql-editor {
+    font-size: 14px;
+    // padding: 12px 20px;
+    &.ql-blank:before {
+      color: rgba(0, 0, 0, 0.25);
+    }
+    .editor.focus & {
+      background-color: #fbfbfb;
+    }
+  }
+
+  &.editor-closed {
+    height: 58px;
+    cursor: pointer;
+    border: solid 1px #30a88f;
+  }
+
+  &.editor-opened {
+    min-height: 200px;
+    padding-bottom: 36px;
+  }
+  &.editor-draft-opened {
+    min-height: 200px;
+  }
+  &.editor-draft-opened {
+    min-height: 200px;
+  }
+}
+.ToolbarContainer {
+  &.focus {
+    border-top: solid 1px $teal-4;
+  }
+}
+.RichEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
+  display: none;
+}
+
+
+.RichMediaEditor {
+  border-radius: 6px;
+  border: solid 1px $grey-4;
+  position: relative;
+
+  &.focus,
+  &.ElementsForm__quill-editor--focus {
+    border: solid 1px $teal-4;
+    outline: none;
+    background: #fbfbfb;
+    & .ql-container {
+      background-color: #fbfbfb;
+    }
+  }
+  .editorStyles {
+    .toolbarContainer {
+      border-top: solid 1px $teal-4;
+    }
+  }
+  .ql-editor {
+    font-size: 14px;
+    // padding: 12px 20px;
+    &.ql-blank:before {
+      color: rgba(0, 0, 0, 0.25);
+    }
+    .editor.focus & {
+      background-color: #fbfbfb;
+    }
+  }
+  &:focus {
+    border: solid 1px $teal-4;
+  }
+  &.editor-closed {
+    height: 58px;
+    cursor: pointer;
+    border: solid 1px #30a88f;
+  }
+
+  &.editor-opened {
+    min-height: 200px;
+    padding-bottom: 36px;
+  }
+
+  &.editor-draft-opened {
+    min-height: 200px;
+  }
+}
+
+.InlineViewer {
+  figure {
+    margin: 0px;
+  }
+  &.InlineViewer__hidden {
+    display: none;
+  }
+
+  &.InlineViewer__open {
+    min-height: 200px;
+    padding-bottom: 36px;
+  }
+}
+
+.fillerText {
+  display: flex;
+  margin: 21px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #30a88f;
+  &:before {
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    background-image: url(assets/write-icon-light-green.svg);
+  }
+}
+
+.textInput {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 200px;
+  border-radius: 6px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 37px;
+  box-sizing: border-box;
+  cursor: text;
+}
+
+.toolbar {
+  position: absolute;
+  background-color: #ebfaf7;
+  border-top: solid 1px $grey-4;
+  height: 36px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 6px 6px;
+  padding: 0 10px;
+  margin: 0;
+  .editor.focus & {
+    border-top: solid 1px $teal-4;
+  }
+  button {
+    display: inline-block;
+    font-size: 19px;
+    line-height: 19px;
+    width: 23px;
+    margin: 3px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    background: none;
+  }
+}
+
+.ql-active {
+  background-color: #b7cfef !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.upload-file {
+  display: inline-block;
+  input {
+    display: none;
+  }
+}
+
+.attachButton {
+  width: 19px !important;
+  height: 16px !important;
+  display: inline-flex !important;
+  padding: 1px 1px 1px 25px !important;
+  line-height: initial;
+  background-repeat: no-repeat;
+  background-image: url(assets/attachment-icon-green.svg) !important;
+  margin-left: 20px !important;
+}
+
+.actionButtons {
+  margin: 7px 0;
+  .btn {
+    float: right;
+    /*color:#30a88f;
+    padding:9px 23px;
+    display: inline-flex;
+    border-radius:5px;
+    cursor: pointer;
+    &:hover {
+      color:#3dd2b3;
+    }
+    &.addNote {
+      color:#fff;
+      background-color: #30a88f;
+      &:hover {
+        color:#fff;
+        background-color:#3dd2b3;
+      }
+    }*/
+  }
+}

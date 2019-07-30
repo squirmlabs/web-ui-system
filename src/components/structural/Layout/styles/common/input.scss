@@ -1,0 +1,23 @@
+input {
+  height: 50px;
+  width: 100%;
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 14px;
+  padding: 0 20px;
+  font-weight: 500;
+  box-sizing: border-box;
+  margin: 0 0 30px;
+  &:focus {
+      background: #fbfbfb;
+  }
+
+  @include rounded-border-input(text);
+
+  @include placeholder {
+    @include hint-font;
+  }
+  @include breakpoint() {
+    margin: 10px 0;
+    width: 100%;
+  }
+}

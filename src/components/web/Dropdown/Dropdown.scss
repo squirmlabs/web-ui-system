@@ -1,0 +1,111 @@
+$duration: 150ms;
+
+.Dropdown {
+  font-family: "Roboto";	
+  /* Reset input styles, since another sheet is affecting it */
+  input, input:focus {
+    border: none;
+    padding: initial;
+    margin: initial;
+    box-shadow: initial;
+    // @include breakpoint() {
+    //   height: 38px;
+    // }
+  }
+
+  .Select-clear, .Select-arrow-zone {
+    // padding-bottom: 7px;
+  }
+
+  .Select-menu-outer {
+    border: 1px solid #3dd2b3;
+    border-radius: 0;
+  }
+
+  .Select-clear-zone:hover {
+    color: white;
+  }
+
+  .Select--multi .Select-value  {
+    border-radius: 25px;
+  }
+
+  .Select-option.is-selected {
+    background-color: #59b9a5;
+    color: white;
+  }
+
+  .Select-placeholder {
+    left: 0px;
+    color: #c9c9c9;
+    font-style: normal;
+  }
+
+  .Select-control {
+    box-sizing: border-box;
+    border: 1px solid #B5B6B5;
+    border-radius: 0;
+    padding: 0px;
+    width: 100%;
+    height: 38px;
+    // margin: 2px 0 0 0;
+    color: #4A4A4A;
+  }
+  
+  .Select-control:hover {
+    transition: border $duration ease; 
+    border: 1px solid #C5E6D6; 
+  }
+
+  .Select {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    border: hidden;
+  }
+
+  .Select-placeholder, .Select--single > .Select-control .Select-value {
+    padding: 0 10px;
+    top: 0;
+  }
+
+  .Select.is-focused > .Select-control {
+    border-color: #59b9a5;
+  }
+
+  .Input__focused {
+    .Select > .Select-control {
+      box-shadow: inset 0 0 2px 0 rgba(51,58,86,0.2);
+    }
+  }
+  
+  .Input__error {
+    .Select > .Select-control {
+      border-color: #D0021B;
+      
+      &:hover {
+        border: 1px solid rgb(170, 0, 20); 
+      }
+    }
+  
+    .Input__charCount {
+      color: #D0021B;
+    }
+  }
+  
+  .Input__error.Input__focused {
+    .Input__label {
+      color: #D0021B;
+    }
+  
+    .Select > .Select-control {
+      border-color: rgb(170, 0, 20);
+    }
+
+    .Select-menu-outer {
+      border: 1px solid rgb(170, 0, 20);
+    }
+
+  }
+}
