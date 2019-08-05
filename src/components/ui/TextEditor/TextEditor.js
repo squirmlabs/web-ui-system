@@ -5,6 +5,7 @@ import { EditorState, convertFromRaw } from 'draft-js';
 import editorStyles from './styles.css';
 
 const { object, string } = PropTypes;
+
 const initialState = {
   entityMap: {
     0: {
@@ -52,7 +53,7 @@ const initialState = {
     }
   ]
 };
-export default class EditorEditable extends Component {
+export default class TextEditor extends Component {
   constructor() {
     super();
     this.state = {
@@ -65,15 +66,22 @@ export default class EditorEditable extends Component {
     });
   };
   render() {
+    const { readOnly } = this.props;
     return (
       <div>
         <div>
           <div className={editorStyles.viewer}>
-            <Editor onChange={this.onChange} editorState={this.state.editorState} />
+            <Editor
+              onChange={this.onChange}
+              readOnly={readOnly}
+              editorState={this.state.editorState}
+            />
           </div>
         </div>
       </div>
     );
   }
 }
-EditorEditable.propTypes = {};
+TextEditor.propTypes = {
+  readOnly: PropTypes.bool
+};

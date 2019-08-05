@@ -13,7 +13,6 @@ module.exports = [
   '**/components/ui/**/withRoot.js',
   '**/components/ui/**/styles.js',
   '**/components/ui/**/tileData.js',
-  '**/components/ui/EditorReadOnly/EditorReadOnly.js',
   // Web Components
   '**/components/web/**/styles.js',
   '**/components/web/**/index.js',
